@@ -12,7 +12,7 @@ jobs:
     - name: gitcheckout
       uses: actions/checkout@v3
     - name: setup-terraform
-      uses: hashicorp/setup-terraform@v1
+      uses: hashicorp/setup-terraform@v2
     - name: run-terraform
       working-directory: ./hub/compute/virtualmachines
       run: terraform init && terraform plan -out=tfplan && terraform apply tfplan --auto-approve
