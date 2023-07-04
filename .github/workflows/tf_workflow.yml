@@ -1,0 +1,17 @@
+---
+name: azure_tf_wf
+on:
+    push:
+    branches:
+        - main
+job:
+    terraform:
+    runs-on: Windows
+    steps:
+    - name: gitcheckout
+      uses: actions/checkout@v3
+    - name: setup-terraform
+      uses: hashicorp/setup-terraform@v1
+    - name: run-terraform
+      working-directory: ./hub/compute/virtualmachines
+      run: terraform init && terraform plan -out=tfplan && terraform apply tfplan --auto-approve
