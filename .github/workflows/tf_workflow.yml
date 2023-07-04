@@ -1,11 +1,12 @@
 ---
 name: azure_tf_wf
 on:
-    push:
-    branches:
-        - main
-job:
-    terraform:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
+jobs:
+  terraform:
     runs-on: Windows
     steps:
     - name: gitcheckout
