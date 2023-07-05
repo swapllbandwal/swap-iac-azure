@@ -31,7 +31,6 @@ jobs:
       working-directory: ./hub/compute/virtualmachines
       run: |
         terraform init 
-        touch terraform.log
         terraform apply -auto-approve 2>&1 | tee terraform.log
         cat terraofrm.log
       
