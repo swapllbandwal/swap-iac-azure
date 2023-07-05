@@ -8,17 +8,17 @@ variable "vm_map" {
   
     default = {
       "vm1" = {
-        name = "swap-vm4"
+        name = "dev-vm1"
         size = "Standard_B1s"
         admin_password = "P@ssw0rd@123"    
       }
       "vm2 " = {
-        name = "swap-vm5"
+        name = "dev-vm2"
         size = "Standard_B1s"
         admin_password = "P@ssw0rd@123"    
       }
       "vm3" = {
-        name = "swap-vm3"
+        name = "dev-vm3"
         size = "Standard_D2s_v3"
         admin_password = "P@ssw0rd@123"    
       }
