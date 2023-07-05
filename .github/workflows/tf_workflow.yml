@@ -21,7 +21,7 @@ env:
 
 jobs:
   terraform:
-    runs-on: Windows
+    runs-on: macOS
     steps:
     - name: gitcheckout
       uses: actions/checkout@v3
@@ -32,5 +32,5 @@ jobs:
       run: |
         terraform init 
         terraform apply -auto-approve 2>&1 | tee terraform.log
-        cat terraofrm.log
+        cat terraform.log
       
