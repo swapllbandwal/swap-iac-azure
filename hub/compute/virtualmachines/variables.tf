@@ -7,17 +7,17 @@ variable "vm_map" {
     }))
   
     default = {
-      "vm1" = {
+      "dev-vm1" = {
         name = "dev-vm1"
         size = "Standard_B1s"
         admin_password = "P@ssw0rd@123"    
       }
-      "vm2 " = {
+      "dev-vm2 " = {
         name = "dev-vm2"
         size = "Standard_B1s"
         admin_password = "P@ssw0rd@123"    
       }
-      "vm3" = {
+      "dev-vm3" = {
         name = "dev-vm3"
         size = "Standard_D2s_v3"
         admin_password = "P@ssw0rd@123"    
