@@ -29,11 +29,9 @@ jobs:
       uses: hashicorp/setup-terraform@v2
     - name: terraform-init
       working-directory: ./hub/compute/virtualmachines
-      run: terraform init
-    - name: terraform-apply
-      working-directory: ./hub/compute/virtualmachines
-      run: terraform apply -auto-approve 2>&1 | tee terraofrm.log
-    - name: print log
-      working-directory: ./hub/compute/virtualmachines
-      run: cat terraofrm.log
+      run: |
+        terraform init 
+        touch terraform.log
+        terraform apply -auto-approve 2>&1 | tee terraform.log
+        cat terraofrm.log
       
